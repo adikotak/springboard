@@ -1,0 +1,259 @@
+<html>
+   <head>
+      <title>Tempus</title>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="animate.css">
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.js"
+         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+         crossorigin="anonymous"></script>
+      <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+      <script type="text/javascript" src="chat.js"></script>
+   </head>
+   <body>
+	   	<canvas></canvas>
+	  <script src="canvas.js"></script>
+
+	  <style type="text/css">
+	  	canvas  {
+		  width:100%;
+		  height:100%;
+		  position: fixed;
+		  opacity: 0.2;
+		}
+	  </style>
+
+      <div style="width: 100%; display: block; margin: 0 auto; height: 100%; z-index: 200; float: left; position: fixed;">
+
+      	<div class="beginning" id="begin_container" style="width: 100%; height: 100%; display: block; color: white; z-index: 200; float: left; background-color: #1E824C; position: fixed;">
+      		<h1 style="font-size: 400%; padding-top: 15%;  margin: 0% 20%; margin-top: 5%; "> This is Springboard. </h1>
+      		<h3 style="font-size: 250%;  margin: 0% 20%"> Answer a couple quick questions, </h3>
+      		<h3 style="font-size: 250%;  margin: 0% 20%"> Get a list of nearby jobs, </h3>
+      		<h3 style="font-size: 250%;  margin: 0% 20%"> Get money and supplies. It's that simple! </h3>
+      			<h3 style="font-size: 250%;  margin: 0% 20%"> Click the screen to get started. </h3>
+
+      	</div>
+
+         <div class="container" id="chat_container" style="display: none;">
+            <div class="header">
+               <h2><img src="assets/logo.png" title="user name" style="height: 50px; margin-right: 10px;"/>       Talk with Springboard</h2>
+            </div>
+            <div class="chat-box" style="height: 600px;">
+               <div style="height: 530px;  overflow-y: scroll;" id="chatHolder">
+                  <!-- <div class="message-box left-img animated fadeIn">
+                     <div class="picture">
+                       <img src="assets/logo.png" title="user name"/>
+                     </div>
+                     <div class="message">
+                       <span>Springboard</span>
+                       <p>Hi! I'm Springboard and I want to help you out. What's your first name?</p>
+                     </div>
+                     </div> -->
+                  <!-- <div class="message-box right-img animated fadeIn">
+                     <div class="picture">
+                       <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAf3AAAAJDliM2E2MzlmLTlhNTItNDk3YS1iNGEyLWFhNjgyOTJkYzY4MA.jpg" title="user name"/>
+                     </div>
+                     <div class="message">
+                       <span class="username">User</span>
+                       <p>I'm Johnny</p>
+                     </div>
+                     </div> -->
+               </div>
+               <div class="enter-message" id="enter-message">
+                  <input type="text" id="messageHolder" style="width:300px;"placeholder="Enter your message.."/>
+                  <button id="sendButton" class="btn btn-primary">Send</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <div class="col-md-12" style="z-index: 201;">
+
+	      <div id="health_clinic" style="width: 500px; display: block; margin: 0 auto; display: none;">
+	         <div class="header">
+	            <h2><img src="assets/logo.png" title="user name" style="height: 50px; margin-right: 10px;"/>       Talk with Springboard</h2>
+	         </div>
+	         <div class="chat-box" style="height: 600px;">
+	            <div style="height: 530px;  overflow-y: scroll;" id="medicalChatHolder">
+	               
+	               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.717591608914!2d-122.07983194881552!3d37.39651044150514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7366e034661%3A0x8595a52b88a2174a!2sMayView+Community+Health+Center!5e0!3m2!1sen!2sus!4v1500107258165" width="100%" height="300px" frameborder="0" style="border:0" allowfullscreen></iframe>
+	               <br>
+	               <button class="btn btn-success col-md-8 col-md-offset-2" id="skills_button" style="margin-top: 2%;">Next Step</button>
+	            </div>
+	         </div>
+	      </div>
+	  </div>
+
+	  <div class="col-md-12" style="z-index: 203;">
+
+	      <div id="skills_container" style="width: 500px; display: block; margin: 0 auto; display: none; background-color: white;">
+	         <div class="header">
+	            <h2><img src="assets/logo.png" title="user name" style="height: 50px; margin-right: 10px;"/>       Talk with Springboard</h2>
+	         </div>
+	         <div class="chat-box" style="height: 600px;">
+	            <div style="height: 530px;  overflow-y: scroll;" id="skillsChatHolder">
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="" style="color: black;"> Lawnmowing </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Shearing </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Car Washing </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Moving </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Repairing </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Wood cutting </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Bike Repair </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Recycling </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Dog Walking </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Lifting </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Electricity </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Cooking </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Plumbing </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Organizing </a></div></div>
+
+					<div class="col-md-6"><div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><a href="#" class="alert-link"> Clerical </a></div></div>			              
+
+	               <button class="btn btn-success col-md-8 col-md-offset-2" id="findJobs" style="margin-top: 2%;">Next Step</button>
+	            </div>
+	         </div>
+	      </div>
+	  </div>
+      
+   </body>
+   <style type="text/css">
+      *{
+      font-family:'Helvetica Neue',Helvetica, sans-serif;
+      font-size:14px;
+      margin:0;
+      }
+      a{
+      font-weight:bold;
+      color:#fff;
+      text-decoration:none;
+      }
+      .container{
+      width:500px;
+      display:block;
+      margin:0 auto;
+      box-shadow:0 2px 5px rgba(0,0,0,0.4);
+      }
+      .header{
+      padding:20px 20px 18px 20px;
+      background:#1E824C;
+      color:#fff;
+      }
+      .header h2{
+      font-size:16px;
+      line-height:15px;
+      display:inline-block;
+      }
+      .header a{
+      display:inline-block;
+      float:right;
+      background:#3d8b4e;
+      font-size:25px;
+      line-height:20px;
+      padding:3px 6px;
+      margin-top:-5px;
+      border-radius:2px;
+      }
+      .chat-box, .enter-message{
+      background:#ECECEC;
+      padding:0 20px;
+      color:#a1a1a1;
+      }
+      .chat-box .message-box{
+      padding:18px 0 10px;
+      clear:both;
+      }
+      .message-box .picture{
+      float:left;
+      width:50px;
+      display:block;
+      padding-right:10px;
+      }
+      .picture img{
+      width:43px;
+      height:48px;
+      border-radius:5px;
+      }
+      .picture span{
+      font-weight:bold;
+      font-size:12px;
+      clear:both;
+      display:block;
+      text-align:center;
+      margin-top:3px;
+      }
+      .message{
+      background:#fff;
+      display:inline-block;
+      padding:13px;
+      width:274px;
+      border-radius:2px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.04);
+      position:relative;
+      }
+      .message:before{
+      content:"";
+      position:absolute;
+      display:block;
+      left:0;
+      border-right:6px solid #fff;
+      border-top: 6px solid transparent;
+      border-bottom:6px solid transparent;
+      top:10px;
+      margin-left:-6px;
+      }
+      .message span{
+      color:#555;
+      font-weight:bold;
+      }
+      .message p{
+      padding-top:5px;
+      }
+      .message-box.right-img .picture{
+      float:right;
+      padding:0;
+      padding-left:10px;
+      }
+      .message-box.right-img .picture img{
+      float:right;
+      }
+      .message-box.right-img .message:before{
+      left:100%;
+      margin-right:6px;
+      margin-left:0;
+      border-right:6px solid transparent;
+      border-left:6px solid #fff;
+      border-top: 6px solid transparent;
+      border-bottom:6px solid transparent;
+      }
+      .enter-message{
+      padding:13px 0px;
+      }
+      .enter-message input{
+      border:none;
+      padding:10px 12px;
+      background:#d3d3d3;
+      width:260px;
+      border-radius:2px;
+      }
+      .enter-message a.send{
+      padding:10px 15px;
+      background:#6294c2;
+      border-radius:2px;
+      float:right;
+      }
+   </style>
+</html>

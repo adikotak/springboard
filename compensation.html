@@ -1,0 +1,119 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+		<title>SpringBoard Compensation</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<script src="js/jquery.min.js"></script>
+		<!-- //js -->
+		<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Buje Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+				function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- //for-mobile-apps -->
+		<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+
+		<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+
+		
+<!-- start-smoth-scrolling -->
+</head>
+
+<body>
+<!-- banner -->
+	<div style="width: 500px; display: block; margin: 0 auto; height: 100%; z-index: 200;">
+
+		<div class="banner-info" style="margin-top: 10%;">
+			<img src="assets/lawnmower.jpg" style="width: 100%;">
+			<br><br>
+			<h2>Lawn Mowing</h2>
+			<p style=" color: black; font-size: 130%;"><strong>28372 Rainbow Dr.; Cupertino CA, 95014</strong></p>
+			<p style="color: #AAAAAA; font-size: 130%;"><strong style="color: #888888;"> Skills Required: </strong> Lawn mower usage, organization, gardening experience.</p>
+			<br>
+
+			<p style="color: #AAAAAA; font-size: 130%;text-align: center;"><strong style="color: #888888;"> Note from Board: </strong> <br> Hi! My wife really needs me to mow this lawn but I am really busy with work this week. Looking for some help! </p>
+			<form id="phone">
+				<input type="text" style="width: 500px;" placeholder="ENTER YOUR PHONE NUMBER" required=" ">
+				<!-- <input type="submit" value="SUBMIT"> -->
+				<div class="clearfix"> </div>
+			</form>
+		</div>
+		<div id="buttons" class="banner-icons">
+			<h3 style="margin-top: 0px;"><strong> Select Compensation Option: </strong></h3>
+			<div style="display: inline;">
+				<div style="width: 33%; height: 130px;" class="col-md-4" id="home"></div>
+				<div style="width: 33%; height: 130px;" class="col-md-4" id="food"></div>
+				<div style="width: 33%; height: 130px;" class="col-md-4" id="money"></div>
+			</div>
+		</div>
+		<div id="thanks" class="banner-icons" style="display: none;">
+			<h3 style="margin-top: 0px; color: green; text-align: center; padding-top: 20px; padding-bottom: 20px;"><strong> You have now registered for this job. </strong></h3>
+		</div>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+			<style type="text/css">
+				#home {
+					background-image: url("home1.png");
+					background-size: 100% 100%;
+				}
+
+				#home:hover {
+					background-image: url("home2.png");
+					background-size: 100% 100%;
+				}
+
+				#food {
+					background-image: url("food1.png");
+					background-size: 100% 100%;
+				}
+
+				#food:hover {
+					background-image: url("food2.png");
+					background-size: 100% 100%;
+				}
+
+				#money {
+					background-image: url("money1.png");
+					background-size: 100% 100%;
+				}
+
+				#money:hover {
+					background-image: url("money2.png");
+					background-size: 100% 100%;
+				}
+			</style>
+
+			<script>
+			$( "span.menu" ).click(function() {
+				$( "ul.nav1" ).slideToggle( 300, function() {
+					 // Animation complete.
+				});
+			});
+			$( "#home" ).click(function() {
+				$("#phone").hide();
+				$("#buttons").hide();
+				$("#thanks").show();
+
+				responsiveVoice.speak("Congratulations on the new job! Keep up the great work.", "Australian Female");
+
+
+
+			});
+			</script>
+<!-- //banner -->
+</body>
+</html>
