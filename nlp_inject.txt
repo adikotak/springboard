@@ -1,0 +1,8 @@
+<script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script>
+<script>
+  var doc = nlp('dinosaur')
+
+  var str = doc.nouns().toPlural().out('text')
+  console.log(str)
+  // 'dinosaurs'
+</script>
